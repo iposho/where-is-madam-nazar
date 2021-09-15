@@ -38,9 +38,12 @@ bot.command('location', (ctx) => {
     });
 });
 
-bot.command('about', (ctx) => ctx.replyWithHTML(strings.getAboutString(), {
-  disable_web_page_preview: true,
-}));
+bot.command('about', (ctx) => {
+  logger.addEntryToUserLog(ctx.update, 'about');
+  return ctx.replyWithHTML(strings.getAboutString(), {
+    disable_web_page_preview: true,
+  });
+});
 
 // Launch bot
 bot.launch();
