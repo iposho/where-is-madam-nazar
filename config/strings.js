@@ -12,7 +12,7 @@ const getCaption = (response) => {
   const { region } = location;
   const nearBy = location.near_by;
 
-  const string = `<b>Madam Nazar's current location</b>\nRegion: ${toTitleCase(region.name)}\nPrecise location: ${toTitleCase(region.precise)}\nNear by: ${toTitleCase(nearBy.join(', '))}\nupdated: ${data.dataFor}`;
+  const string = `<b>Madam Nazar's current location</b>\n\nRegion: ${toTitleCase(region.name)}\nPrecise location: ${toTitleCase(region.precise)}\nNear by: ${toTitleCase(nearBy.join(', '))}\n\n<i>Updated: ${data.dataFor}</i>`;
 
   return string;
 };
