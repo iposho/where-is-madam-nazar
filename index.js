@@ -1,7 +1,3 @@
-const express = require('express');
-
-const app = express();
-
 // Telegraf's imports
 const { Telegraf } = require('telegraf');
 
