@@ -10,24 +10,15 @@ const logger = require('./config/logger');
 const strings = require('./config/strings');
 const api = require('./config/requests');
 
-const { name, version } = require('./package.json');
-
 require('dotenv').config();
-
-// Init app
-app.set('port', (process.env.PORT || 5000));
 
 // Init bot
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.start((ctx) => {
-  const firstName = ctx.update.message.from.first_name;
-
-  const message = `Hi, ${firstName}!\n\nIf you want to see Madam Nazar current location, send /location command`;
-
   logger.addEntryToUserLog(ctx.update);
 
-  return ctx.replyWithHTML(message);
+  return ctx.replyWithHTML(strings.getStartMessage(ctx));
 });
 
 bot.command('location', (ctx) => {
@@ -51,17 +42,9 @@ bot.command('location', (ctx) => {
     });
 });
 
-bot.command('about', (ctx) => ctx.replyWithHTML('Test'));
-
-bot.command('help', (ctx) => ctx.replyWithHTML('Test2'));
+bot.command('about', (ctx) => ctx.replyWithHTML(strings.getAboutString(), {
+  disable_web_page_preview: true,
+}));
 
 // Launch bot
 bot.launch();
-
-app.get('/mp', (request, response) => {
-  const result = `<pre>🚀 ${name} is running.\n\nversion ${version}</pre>`;
-  response.send(result);
-}).listen(app.get('port'), () => {
-  // eslint-disable-next-line no-console
-  console.log(`🚀 ${name} running, server is listening on port`, app.get('port'));
-});

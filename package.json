@@ -1,7 +1,7 @@
 {
   "name": "where-is-madam-nazar",
   "version": "1.0.0",
-  "description": "Madam Nazar's location for Red Dead Redemption 2: Online",
+  "description": "Madam Nazar's current location for Red Dead Redemption 2: Online",
   "main": "index.js",
   "scripts": {
     "dev": "pm2 start index.js --watch",
@@ -11,6 +11,10 @@
   },
   "author": "Pavel Kuzyakin <pavel@kuzyakin.me> (http://kuzyakin.me)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iposho/where-is-madam-nazar.git"
+  },
   "keywords": ["rdr2", "telegram-bot", "telegraf"],
   "dependencies": {
     "axios": "^0.21.4",
