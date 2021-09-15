@@ -7,21 +7,19 @@ const toTitleCase = (phrase) => phrase
   .join(' ');
 
 const getCaption = (response) => {
-  const { data } = response.data;
-  const dateString = data.date;
-  const date = new Date(dateString).toLocaleDateString();
-  const { location } = data.current_location.data;
+  const { data } = response;
+  const { location } = data.data;
   const { region } = location;
   const nearBy = location.near_by;
 
-  const string = `<b>Madam Nazar's current location</b>\nRegion: ${toTitleCase(region.name)}\nPrecise location: ${toTitleCase(region.precise)}\nNear by: ${toTitleCase(nearBy.join(', '))}\nupdated: ${date}`;
+  const string = `<b>Madam Nazar's current location</b>\nRegion: ${toTitleCase(region.name)}\nPrecise location: ${toTitleCase(region.precise)}\nNear by: ${toTitleCase(nearBy.join(', '))}\nupdated: ${data.dataFor}`;
 
   return string;
 };
 
 const getImage = (response) => {
-  const { data } = response.data;
-  const { location } = data.current_location.data;
+  const { data } = response;
+  const { location } = data.data;
   const { image } = location;
 
   return image;
