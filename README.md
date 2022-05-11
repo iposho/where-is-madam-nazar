@@ -2,7 +2,7 @@
 
 # Where is madam Nazar?
 
-Madam Nazar's current location for Red Dead Redemption 2: Online. Use [MadamNazar.io API](https://madamnazar.io/).
+Madam Nazar's current location for Red Dead Redemption 2: Online. Uses [MadamNazar.io API](https://madamnazar.io/).
 
 Demo here: [@WhereIsMadamNazarBot](https://t.me/WhereIsMadamNazarBot)
 
