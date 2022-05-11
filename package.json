@@ -1,6 +1,6 @@
 {
   "name": "where-is-madam-nazar",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Madam Nazar's current location for Red Dead Redemption 2: Online",
   "main": "index.js",
   "scripts": {
