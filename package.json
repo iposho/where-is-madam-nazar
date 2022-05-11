@@ -9,7 +9,7 @@
     "restart": "pm2 restart index.js",
     "stop": "pm2 stop index.js"
   },
-  "author": "Pavel Kuzyakin <pavel@kuzyakin.me> (http://kuzyakin.me)",
+  "author": "Pavel Kuzyakin <pavel@kuzyak.in> (https://kuzyak.in)",
   "license": "MIT",
   "repository": {
     "type": "git",
