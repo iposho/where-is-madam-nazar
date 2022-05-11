@@ -30,7 +30,7 @@ const addEntryToUserLog = (update, command = 'start') => {
 };
 
 const addEntryToErrorLog = (error) => {
-  ensureDirectoryExistence(usersLogPath);
+  ensureDirectoryExistence(errorLogPath);
 
   const timestamp = moment().format('HH:mm:ss DD.MM.YYYY');
   const string = `${timestamp.toString()} ${error}\n`;
