@@ -6,7 +6,7 @@ Madam Nazar's current location for Red Dead Redemption 2: Online. Uses [MadamNaz
 
 Demo is here: [@WhereIsMadamNazarBot](https://t.me/WhereIsMadamNazarBot)
 
-Twitter: [twitter.com/WhereIsMdmNazar][https://twitter.com/WhereIsMdmNazar]
+Twitter: [twitter.com/WhereIsMdmNazar](https://twitter.com/WhereIsMdmNazar)
 
 ## Usage
 ```bash
